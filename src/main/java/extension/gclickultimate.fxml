@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="465.0" prefWidth="331.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="extension.GClickUltimateController">
+   <children>
+      <CheckBox fx:id="chkAlwaysOnTop" layoutX="218.0" layoutY="448.0" mnemonicParsing="false" onAction="#alwaysOnTopClick" text="Always on top" textFill="#000000cb" />
+      <CheckBox fx:id="enableGclickCbx" layoutX="14.0" layoutY="448.0" mnemonicParsing="false" onAction="#enableClick" text="Enable G-Click Ultimate" textFill="#000000cb" />
+      <Pane fx:id="gclickPane" disable="true" prefHeight="438.0" prefWidth="329.0">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="97.0" prefWidth="301.0" style="-fx-border-color: #ccc;">
+               <children>
+                  <Label layoutX="110.0" layoutY="-8.0" style="-fx-background-color: white;" text=" Clickthrough " textFill="#000000b3" />
+                  <RadioButton fx:id="ctDisabled_rdb" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" text="Disable" textFill="#000000cc">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="clickthrough_tgl" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="ctEnabled_rdb" layoutX="103.0" layoutY="16.0" mnemonicParsing="false" text="Enable" textFill="#000000cc" toggleGroup="$clickthrough_tgl" />
+                  <RadioButton fx:id="ctAlways_rdb" layoutX="188.0" layoutY="16.0" mnemonicParsing="false" selected="true" text="Always enable" textFill="#000000cc" toggleGroup="$clickthrough_tgl" />
+                  <CheckBox fx:id="ctBlockSideloads_cbx" layoutX="14.0" layoutY="44.0" mnemonicParsing="false" selected="true" text="Block sideloads" textFill="#000000cc" />
+                  <CheckBox fx:id="ctShiftNoWalk_cbx" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" selected="true" text="Shift-click = no walk" textFill="#000000cc" />
+               </children>
+            </Pane>
+            <CheckBox fx:id="blockShiftRotations_cbx" layoutX="14.0" layoutY="363.0" mnemonicParsing="false" selected="true" text="Block shift-click rotations" textFill="#000000cc" />
+            <CheckBox fx:id="autoShiftDoubleClick_cbx" layoutX="14.0" layoutY="388.0" mnemonicParsing="false" selected="true" text="Auto double click on shift-click" textFill="#000000cc" />
+            <Pane layoutX="14.0" layoutY="125.0" prefHeight="70.0" prefWidth="301.0" style="-fx-border-color: #ccc;">
+               <children>
+                  <Label layoutX="102.0" layoutY="-8.0" style="-fx-background-color: white;" text=" Click scheduling " textFill="#000000b3" />
+                  <CheckBox fx:id="csScheduleClicks_cbx" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" selected="true" text="Schedule clicks" textFill="#000000cc" />
+                  <CheckBox fx:id="csBurstClicks_cbx" layoutX="14.0" layoutY="38.0" mnemonicParsing="false" onAction="#burstCbxToggle" selected="true" text="Burst clicks:" textFill="#000000cc" />
+                  <Spinner fx:id="burst_click_spinner" editable="true" layoutX="114.0" layoutY="34.0" prefHeight="25.0" prefWidth="76.0">
+                     <valueFactory>
+                        <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="9" max="20" min="1" />
+                     </valueFactory>
+                  </Spinner>
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="210.0" prefHeight="55.0" prefWidth="301.0" style="-fx-border-color: #ccc;">
+               <children>
+                  <Label layoutX="104.0" layoutY="-8.0" style="-fx-background-color: white;" text=" Click Recharger " textFill="#000000b3" />
+                  <Button fx:id="clickRechargeBtn" layoutX="9.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="158.0" text="Select click recharger" />
+                  <AnchorPane fx:id="rechargeStatePane" layoutX="178.0" layoutY="16.0" prefHeight="30.0" prefWidth="113.0" style="-fx-border-color: #ccc;">
+                     <children>
+                        <Label fx:id="rechargeLbl" alignment="CENTER" layoutX="1.0" layoutY="7.0" prefHeight="17.0" prefWidth="111.0" text="No recharge" textFill="#000000cd" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <CheckBox fx:id="antiAfkCbx" layoutX="14.0" layoutY="413.0" mnemonicParsing="false" selected="true" text="Anti AFK" textFill="#000000cc" />
+            <Pane layoutX="14.0" layoutY="282.0" prefHeight="67.0" prefWidth="301.0" style="-fx-border-color: #ccc;">
+               <children>
+                  <Label layoutX="101.0" layoutY="-8.0" style="-fx-background-color: white;" text=" Clientside Effect " textFill="#000000b3" />
+                  <RadioButton fx:id="ceNone_rdb" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" selected="true" text="None" textFill="#000000cc">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="effect_tgl" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="ceDuck_rdb" layoutX="73.0" layoutY="12.0" mnemonicParsing="false" text="Duck" textFill="#000000cc" toggleGroup="$effect_tgl" />
+                  <RadioButton fx:id="ceGhost_rdb" layoutX="130.0" layoutY="12.0" mnemonicParsing="false" text="Ghost" textFill="#000000cc" toggleGroup="$effect_tgl" />
+                  <CheckBox fx:id="ceKeep_cbx" layoutX="14.0" layoutY="39.0" mnemonicParsing="false" selected="true" text="Keep in new room" />
+                  <RadioButton fx:id="ceBot_rdb" layoutX="194.0" layoutY="12.0" mnemonicParsing="false" text="Bot" textFill="#000000cc" toggleGroup="$effect_tgl" />
+                  <RadioButton fx:id="ceMini_rdb" layoutX="246.0" layoutY="12.0" mnemonicParsing="false" text="Mini" textFill="#000000cc" toggleGroup="$effect_tgl" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

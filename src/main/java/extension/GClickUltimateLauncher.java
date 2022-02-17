@@ -1,32 +1,25 @@
 package extension;
 
-import gearth.Main;
-import gearth.extensions.ExtensionForm;
-import gearth.extensions.ExtensionFormCreator;
-import gearth.ui.GEarthController;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.image.Image;
+import gearth.extensions.ThemedExtensionFormCreator;
 import javafx.stage.Stage;
 
-public class GClickUltimateLauncher extends ExtensionFormCreator {
+import java.net.URL;
 
-    public ExtensionForm createForm(Stage primaryStage) throws Exception {
+public class GClickUltimateLauncher extends ThemedExtensionFormCreator {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("gclickultimate.fxml"));
-        Parent root = loader.load();
+    @Override
+    protected String getTitle() {
+        return "G-Click Ultimate";
+    }
 
-        primaryStage.setTitle("G-Click Ultimate");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.getScene().getStylesheets().add(GEarthController.class.getResource("/gearth/themes/G-Earth/styling.css").toExternalForm());
-        primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("/gearth/themes/G-Earth/logoSmall.png")));
+    @Override
+    protected URL getFormResource() {
+        return getClass().getResource("gclickultimate.fxml");
+    }
 
-        primaryStage.setResizable(false);
-        primaryStage.sizeToScene();
-
-        return loader.getController();
-
+    @Override
+    protected void initialize(Stage primaryStage) {
+        primaryStage.getScene().getStylesheets().add(getClass().getResource("style.css").toExternalForm());
     }
 
     public static void main(String[] args) {

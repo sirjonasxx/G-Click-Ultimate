@@ -1,0 +1,27 @@
+/*.section-title {*/
+/*    -fx-opacity: 0.2;*/
+/*}*/
+
+.g-light .redbg {
+    -fx-background-color: #F9B2B0;
+}
+
+.g-dark .redbg {
+    -fx-background-color: #b32927;
+}
+
+.g-light .greenbg {
+    -fx-background-color: #9AFD9F;
+}
+
+.g-dark .greenbg {
+    -fx-background-color: #68b246;
+}
+
+.g-light .orangebg {
+    -fx-background-color: #FFC485;
+}
+
+.g-dark .orangebg {
+    -fx-background-color: #b37c22;
+}

@@ -51,7 +51,9 @@ public class ToggleFurniUtils {
 
                     Platform.runLater(() -> {
                         extension.rechargeLbl.setText("Enabled");
-                        extension.rechargeStatePane.setBackground(new Background(new BackgroundFill(Paint.valueOf("#9AFD9F"), CornerRadii.EMPTY, Insets.EMPTY)));
+//                        extension.rechargeStatePane.setBackground(new Background(new BackgroundFill(Paint.valueOf("#9AFD9F"), CornerRadii.EMPTY, Insets.EMPTY)));
+                        extension.rechargeStatePane.getStyleClass().clear();
+                        extension.rechargeStatePane.getStyleClass().add("greenbg");
                     });
                 }
                 else {
@@ -89,7 +91,9 @@ public class ToggleFurniUtils {
         Platform.runLater(() -> {
             extension.rechargeLbl.setText("No recharge");
             extension.clickRechargeBtn.setText("Select click recharger");
-            extension.rechargeStatePane.setBackground(new Background(new BackgroundFill(Paint.valueOf("#F9B2B0"), CornerRadii.EMPTY, Insets.EMPTY)));
+//            extension.rechargeStatePane.setBackground(new Background(new BackgroundFill(Paint.valueOf("#F9B2B0"), CornerRadii.EMPTY, Insets.EMPTY)));
+            extension.rechargeStatePane.getStyleClass().clear();
+            extension.rechargeStatePane.getStyleClass().add("redbg");
         });
     }
 
@@ -100,7 +104,9 @@ public class ToggleFurniUtils {
         Platform.runLater(() -> {
             extension.rechargeLbl.setText("Awaiting furni");
             extension.clickRechargeBtn.setText("Abort");
-            extension.rechargeStatePane.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFC485"), CornerRadii.EMPTY, Insets.EMPTY)));
+//            extension.rechargeStatePane.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFC485"), CornerRadii.EMPTY, Insets.EMPTY)));
+            extension.rechargeStatePane.getStyleClass().clear();
+            extension.rechargeStatePane.getStyleClass().add("orangebg");
         });
     }
 

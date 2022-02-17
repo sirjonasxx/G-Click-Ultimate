@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="465.0" prefWidth="331.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="extension.GClickUltimateController">
+<AnchorPane prefHeight="465.0" prefWidth="331.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="extension.GClickUltimateController">
    <children>
       <CheckBox fx:id="chkAlwaysOnTop" layoutX="218.0" layoutY="448.0" mnemonicParsing="false" onAction="#alwaysOnTopClick" text="Always on top" textFill="#000000cb" />
       <CheckBox fx:id="enableGclickCbx" layoutX="14.0" layoutY="448.0" mnemonicParsing="false" onAction="#enableClick" text="Enable G-Click Ultimate" textFill="#000000cb" />
@@ -11,7 +12,11 @@
          <children>
             <Pane layoutX="14.0" layoutY="14.0" prefHeight="97.0" prefWidth="301.0" style="-fx-border-color: #ccc;">
                <children>
-                  <Label layoutX="110.0" layoutY="-8.0" style="-fx-background-color: white;" text=" Clickthrough " textFill="#000000b3" />
+                  <Label layoutX="110.0" layoutY="-8.0" text=" Clickthrough " textFill="#000000b3">
+                     <styleClass>
+                        <String fx:value="themed-background" />
+                        <String fx:value="softer" />
+                     </styleClass></Label>
                   <RadioButton fx:id="ctDisabled_rdb" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" text="Disable" textFill="#000000cc">
                      <toggleGroup>
                         <ToggleGroup fx:id="clickthrough_tgl" />
@@ -27,7 +32,11 @@
             <CheckBox fx:id="autoShiftDoubleClick_cbx" layoutX="14.0" layoutY="388.0" mnemonicParsing="false" selected="true" text="Auto double click on shift-click" textFill="#000000cc" />
             <Pane layoutX="14.0" layoutY="125.0" prefHeight="70.0" prefWidth="301.0" style="-fx-border-color: #ccc;">
                <children>
-                  <Label layoutX="102.0" layoutY="-8.0" style="-fx-background-color: white;" text=" Click scheduling " textFill="#000000b3" />
+                  <Label layoutX="102.0" layoutY="-8.0" text=" Click scheduling " textFill="#000000b3">
+                     <styleClass>
+                        <String fx:value="themed-background" />
+                        <String fx:value="softer" />
+                     </styleClass></Label>
                   <CheckBox fx:id="csScheduleClicks_cbx" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" selected="true" text="Schedule clicks" textFill="#000000cc" />
                   <CheckBox fx:id="csBurstClicks_cbx" layoutX="14.0" layoutY="38.0" mnemonicParsing="false" onAction="#burstCbxToggle" selected="true" text="Burst clicks:" textFill="#000000cc" />
                   <Spinner fx:id="burst_click_spinner" editable="true" layoutX="114.0" layoutY="34.0" prefHeight="25.0" prefWidth="76.0">
@@ -39,9 +48,13 @@
             </Pane>
             <Pane layoutX="14.0" layoutY="210.0" prefHeight="55.0" prefWidth="301.0" style="-fx-border-color: #ccc;">
                <children>
-                  <Label layoutX="104.0" layoutY="-8.0" style="-fx-background-color: white;" text=" Click Recharger " textFill="#000000b3" />
+                  <Label layoutX="104.0" layoutY="-8.0" text=" Click Recharger " textFill="#000000b1">
+                     <styleClass>
+                        <String fx:value="themed-background" />
+                        <String fx:value="softer" />
+                     </styleClass></Label>
                   <Button fx:id="clickRechargeBtn" layoutX="9.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="158.0" text="Select click recharger" />
-                  <AnchorPane fx:id="rechargeStatePane" layoutX="178.0" layoutY="16.0" prefHeight="30.0" prefWidth="113.0" style="-fx-border-color: #ccc;">
+                  <AnchorPane fx:id="rechargeStatePane" layoutX="178.0" layoutY="16.0" prefHeight="30.0" prefWidth="113.0" style="-fx-border-color: #ccc;" styleClass="redbg">
                      <children>
                         <Label fx:id="rechargeLbl" alignment="CENTER" layoutX="1.0" layoutY="7.0" prefHeight="17.0" prefWidth="111.0" text="No recharge" textFill="#000000cd" />
                      </children>
@@ -51,7 +64,11 @@
             <CheckBox fx:id="antiAfkCbx" layoutX="14.0" layoutY="413.0" mnemonicParsing="false" selected="true" text="Anti AFK" textFill="#000000cc" />
             <Pane layoutX="14.0" layoutY="282.0" prefHeight="67.0" prefWidth="301.0" style="-fx-border-color: #ccc;">
                <children>
-                  <Label layoutX="101.0" layoutY="-8.0" style="-fx-background-color: white;" text=" Clientside Effect " textFill="#000000b3" />
+                  <Label layoutX="101.0" layoutY="-8.0" text=" Clientside Effect " textFill="#000000b3">
+                     <styleClass>
+                        <String fx:value="themed-background" />
+                        <String fx:value="softer" />
+                     </styleClass></Label>
                   <RadioButton fx:id="ceNone_rdb" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" selected="true" text="None" textFill="#000000cc">
                      <toggleGroup>
                         <ToggleGroup fx:id="effect_tgl" />

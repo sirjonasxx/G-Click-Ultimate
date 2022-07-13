@@ -63,7 +63,7 @@ public class GClickUltimateController extends ExtensionForm {
     private volatile FloorState floorState = null;
 
     private volatile ToggleFurniUtils toggleFurniUtils;
-    private volatile ClickScheduleTools clickScheduleTools;
+//    private volatile ClickScheduleTools clickScheduleTools;
     private volatile ClickThroughTools clickThroughTools;
     private volatile OtherClickTools otherClickTools;
     private volatile EffectTools effectTools;
@@ -89,7 +89,7 @@ public class GClickUltimateController extends ExtensionForm {
         }
 
         toggleFurniUtils = new ToggleFurniUtils(this);
-        clickScheduleTools = new ClickScheduleTools(this);
+//        clickScheduleTools = new ClickScheduleTools(this);
         clickThroughTools = new ClickThroughTools(this);
         otherClickTools = new OtherClickTools(this);
         effectTools = new EffectTools(this);

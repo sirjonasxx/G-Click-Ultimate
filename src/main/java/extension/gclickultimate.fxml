@@ -4,11 +4,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="465.0" prefWidth="331.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="extension.GClickUltimateController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="331.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="extension.GClickUltimateController">
    <children>
-      <CheckBox fx:id="chkAlwaysOnTop" layoutX="218.0" layoutY="448.0" mnemonicParsing="false" onAction="#alwaysOnTopClick" text="Always on top" textFill="#000000cb" />
-      <CheckBox fx:id="enableGclickCbx" layoutX="14.0" layoutY="448.0" mnemonicParsing="false" onAction="#enableClick" text="Enable G-Click Ultimate" textFill="#000000cb" />
-      <Pane fx:id="gclickPane" disable="true" prefHeight="438.0" prefWidth="329.0">
+      <CheckBox fx:id="chkAlwaysOnTop" layoutX="219.0" layoutY="283.0" mnemonicParsing="false" onAction="#alwaysOnTopClick" text="Always on top" textFill="#000000cb" />
+      <CheckBox fx:id="enableGclickCbx" layoutX="15.0" layoutY="283.0" mnemonicParsing="false" onAction="#enableClick" text="Enable G-Click Ultimate" textFill="#000000cb" />
+      <Pane fx:id="gclickPane" disable="true" prefHeight="283.0" prefWidth="329.0">
          <children>
             <Pane layoutX="14.0" layoutY="14.0" prefHeight="97.0" prefWidth="301.0" style="-fx-border-color: #ccc;">
                <children>
@@ -28,41 +28,10 @@
                   <CheckBox fx:id="ctShiftNoWalk_cbx" layoutX="14.0" layoutY="69.0" mnemonicParsing="false" selected="true" text="Shift-click = no walk" textFill="#000000cc" />
                </children>
             </Pane>
-            <CheckBox fx:id="blockShiftRotations_cbx" layoutX="14.0" layoutY="363.0" mnemonicParsing="false" selected="true" text="Block shift-click rotations" textFill="#000000cc" />
-            <CheckBox fx:id="autoShiftDoubleClick_cbx" layoutX="14.0" layoutY="388.0" mnemonicParsing="false" selected="true" text="Auto double click on shift-click" textFill="#000000cc" />
-            <Pane layoutX="14.0" layoutY="125.0" prefHeight="70.0" prefWidth="301.0" style="-fx-border-color: #ccc;">
-               <children>
-                  <Label layoutX="102.0" layoutY="-8.0" text=" Click scheduling " textFill="#000000b3">
-                     <styleClass>
-                        <String fx:value="themed-background" />
-                        <String fx:value="softer" />
-                     </styleClass></Label>
-                  <CheckBox fx:id="csScheduleClicks_cbx" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" selected="true" text="Schedule clicks" textFill="#000000cc" />
-                  <CheckBox fx:id="csBurstClicks_cbx" layoutX="14.0" layoutY="38.0" mnemonicParsing="false" onAction="#burstCbxToggle" selected="true" text="Burst clicks:" textFill="#000000cc" />
-                  <Spinner fx:id="burst_click_spinner" editable="true" layoutX="114.0" layoutY="34.0" prefHeight="25.0" prefWidth="76.0">
-                     <valueFactory>
-                        <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="9" max="20" min="1" />
-                     </valueFactory>
-                  </Spinner>
-               </children>
-            </Pane>
-            <Pane layoutX="14.0" layoutY="210.0" prefHeight="55.0" prefWidth="301.0" style="-fx-border-color: #ccc;">
-               <children>
-                  <Label layoutX="104.0" layoutY="-8.0" text=" Click Recharger " textFill="#000000b1">
-                     <styleClass>
-                        <String fx:value="themed-background" />
-                        <String fx:value="softer" />
-                     </styleClass></Label>
-                  <Button fx:id="clickRechargeBtn" layoutX="9.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="158.0" text="Select click recharger" />
-                  <AnchorPane fx:id="rechargeStatePane" layoutX="178.0" layoutY="16.0" prefHeight="30.0" prefWidth="113.0" style="-fx-border-color: #ccc;" styleClass="redbg">
-                     <children>
-                        <Label fx:id="rechargeLbl" alignment="CENTER" layoutX="1.0" layoutY="7.0" prefHeight="17.0" prefWidth="111.0" text="No recharge" textFill="#000000cd" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </Pane>
-            <CheckBox fx:id="antiAfkCbx" layoutX="14.0" layoutY="413.0" mnemonicParsing="false" selected="true" text="Anti AFK" textFill="#000000cc" />
-            <Pane layoutX="14.0" layoutY="282.0" prefHeight="67.0" prefWidth="301.0" style="-fx-border-color: #ccc;">
+            <CheckBox fx:id="blockShiftRotations_cbx" layoutX="14.0" layoutY="205.0" mnemonicParsing="false" selected="true" text="Block shift-click rotations" textFill="#000000cc" />
+            <CheckBox fx:id="autoShiftDoubleClick_cbx" layoutX="14.0" layoutY="230.0" mnemonicParsing="false" selected="true" text="Auto double click on shift-click" textFill="#000000cc" />
+            <CheckBox fx:id="antiAfkCbx" layoutX="14.0" layoutY="255.0" mnemonicParsing="false" selected="true" text="Anti AFK" textFill="#000000cc" />
+            <Pane layoutX="14.0" layoutY="125.0" prefHeight="67.0" prefWidth="301.0" style="-fx-border-color: #ccc;">
                <children>
                   <Label layoutX="101.0" layoutY="-8.0" text=" Clientside Effect " textFill="#000000b3">
                      <styleClass>
@@ -80,6 +49,39 @@
                   <RadioButton fx:id="ceMini_rdb" layoutX="246.0" layoutY="12.0" mnemonicParsing="false" text="Mini" textFill="#000000cc" toggleGroup="$effect_tgl" />
                </children>
             </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="472.0" layoutY="88.0" prefHeight="70.0" prefWidth="301.0" style="-fx-border-color: #ccc;" visible="false">
+         <children>
+            <Label layoutX="102.0" layoutY="-8.0" text=" Click scheduling " textFill="#000000b3">
+               <styleClass>
+                  <String fx:value="themed-background" />
+                  <String fx:value="softer" />
+               </styleClass>
+            </Label>
+            <CheckBox fx:id="csScheduleClicks_cbx" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" selected="true" text="Schedule clicks" textFill="#000000cc" />
+            <CheckBox fx:id="csBurstClicks_cbx" layoutX="14.0" layoutY="38.0" mnemonicParsing="false" onAction="#burstCbxToggle" selected="true" text="Burst clicks:" textFill="#000000cc" />
+            <Spinner fx:id="burst_click_spinner" editable="true" layoutX="114.0" layoutY="34.0" prefHeight="25.0" prefWidth="76.0">
+               <valueFactory>
+                  <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="9" max="20" min="1" />
+               </valueFactory>
+            </Spinner>
+         </children>
+      </Pane>
+      <Pane layoutX="472.0" layoutY="178.0" prefHeight="55.0" prefWidth="301.0" style="-fx-border-color: #ccc;" visible="false">
+         <children>
+            <Label layoutX="104.0" layoutY="-8.0" text=" Click Recharger " textFill="#000000b1">
+               <styleClass>
+                  <String fx:value="themed-background" />
+                  <String fx:value="softer" />
+               </styleClass>
+            </Label>
+            <Button fx:id="clickRechargeBtn" layoutX="9.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="158.0" text="Select click recharger" />
+            <AnchorPane fx:id="rechargeStatePane" layoutX="178.0" layoutY="16.0" prefHeight="30.0" prefWidth="113.0" style="-fx-border-color: #ccc;" styleClass="redbg">
+               <children>
+                  <Label fx:id="rechargeLbl" alignment="CENTER" layoutX="1.0" layoutY="7.0" prefHeight="17.0" prefWidth="111.0" text="No recharge" textFill="#000000cd" />
+               </children>
+            </AnchorPane>
          </children>
       </Pane>
    </children>
